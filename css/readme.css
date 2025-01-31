@@ -1,0 +1,124 @@
+@font-face {
+	font-family: Unifont;
+	src: url("../res/Unifont.otf");
+}
+
+:root {
+	background: url("https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif") #54f;
+	color: #333;
+	font-size: 16px;
+	font-family: Unifont; 
+}
+
+h1 {
+	font-size: 18px;
+}
+
+main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ccc;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 2px 3px 3px 3px #3338;
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas: 
+		"h1 h1 h1"
+		"ar1 ar2 ar2"
+		"ar3 ar4 ar5";
+}
+
+main > h1 {
+	grid-area: h1;
+	text-align: center;
+	border-bottom: 2px ridge #0000ff88;
+	padding: 2px;
+	margin: 0;
+	margin-top: -15px;
+}
+
+.ar1 {
+	grid-area: ar1;
+}
+
+.ar2 {
+	grid-area: ar2;
+}
+
+.ar3 {
+	grid-area: ar3;
+}
+
+.ar4 {
+	grid-area: ar4;
+}
+
+.ar5 {
+	grid-area: ar5;
+}
+
+article {
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 1px 2px 2px 1px #3338;
+	line-height: 20px;
+}
+
+article:nth-child(2) {
+	background-color: #cb4;
+}
+
+article:nth-child(3) {
+	background-color: #4bc;
+}
+
+article:nth-child(4) {
+	background-color: #d8f;
+}
+
+article:nth-child(5) {
+	background-color: #fa8;
+}
+
+
+article:nth-child(6) {
+	background-color: #8ff;
+}
+
+
+a {
+	color: #54c;
+	background-color: #ddd;
+	padding: 1px;
+	text-decoration: none;
+	transition: 150ms ease-in-out;
+}
+
+a:hover {
+	color: #c45;
+}
+
+li {
+	width: 58px;
+}
+
+.user {
+	margin: 2px;
+	transition: 300ms ease-in-out;
+	cursor: default;
+	user-select: none;
+}
+
+.user.hidden {
+	color: black;
+	background-color: black;
+}
+
+.user.hidden:hover {
+	background-color: #333;
+	color: #333;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML5>
+<html lang='pl'>
+	<head>
+		<meta charset='utf8'>
+		<link rel='stylesheet' href='./css/interface.css' type='text/css'>
+		<link rel='stylesheet' href='./css/ships.css' type='text/css'>
+		<title>Galera Racing</title>
+	</head>
+	<body>
+		<div id='main-menu' class='active'>
+			<a href='./readme.html' id='readme'>Przeczytaj README</a>
+			<div id='menu' class='active'>
+				<h1>Menu Główne</h1>
+				<hr />
+				<button class='menu-opt' id='opt-game'>Rozpocznij grę</button>
+				<button class='menu-opt' id='opt-controls'>Sterowanie</button>
+				<button class='menu-opt' id='opt-options'>Opcje</button>
+				<button class='menu-opt' id='opt-credits'>Napisy</button>
+			</div>
+			<div id='controls' class='hidden'>
+				<h1>Sterowanie</h1>
+				<hr />
+				<button class='menu-opt' id='control-left'>Lewo -</button>
+				<button class='menu-opt' id='control-right'>Prawo -</button>
+				<button class='menu-opt' id='control-shot'>Strzał -</button>
+				<button class='menu-opt' id='control-pause'>Pauza -</button>
+				<button class='menu-opt addi-opt'>Wstecz</button>
+			</div>
+			<div id='options' class='hidden'>
+				<h1>Opcje</h1>
+				<hr />
+				<div class='menu-opt'>
+					<label>Muzyka:</label>
+					<input type='range' id='music' min='0' max='100' value='50'>
+					<sup class='little-label' id='music-range'>50</sup>
+				</div>
+				<div class='menu-opt'>
+					<label>Dźwięki:</label>
+					<input type='range' id='sounds' min='0' max='100' value='50'>
+					<span class='little-label' id='sound-range'>50</span>
+				</div>
+				<div class='menu-opt'>
+					<label>Trudność:</label>
+					<input type='range' id='difficulty' min='0' max='1' value='0'>
+					<span class='little-label' id='difficulty-range'>Łatwy</span>
+				</div>
+				<button class='menu-opt addi-opt'>Wstecz</button>
+			</div>
+			<div id='credits' class='hidden'>
+				<h1>Napisy</h1>
+				<hr />
+				<div id='credits-desc'></div>
+				<button class='menu-opt addi-opt'>Wstecz</button>
+			</div>
+			<div id='version'>1.3.2-Beta</div>
+		</div>
+		<div id='game' class='hidden'>
+			<div id='filter-frame' class='hidden'></div>
+			<div id='winning-screen' class='hidden'>
+				<h1>Wygrywasz!</h1>
+				<hr />
+				Czas: <div id='win-time'>
+					<span class='timer-num'>00</span>
+					<span class='timer-sep'>:</span>
+					<span class='timer-num'>00</span>
+					<span class='timer-sep'>:</span>
+					<span class='timer-num'>00</span>
+				</div><br />
+				Producenci: <div id='win-producers'>100</div><br />
+				Wiosła: <div id='win-oars'>100</div><br />
+				HP: <div id='win-hp'>100</div><br />
+				<hr />
+				Punkty: <div id='win-score'>0</div>
+				<button class='menu-opt addi-opt'>Dalej</button>
+			</div>
+			<div id='losing-screen' class='hidden'>
+				<h1>Przegrywasz!</h1>
+				<hr />
+				Czas: <div id='lose-time'>
+					<span class='timer-num'>00</span>
+					<span class='timer-sep'>:</span>
+					<span class='timer-num'>00</span>
+					<span class='timer-sep'>:</span>
+					<span class='timer-num'>00</span>
+				</div><br />
+				Producenci: <div id='lose-producers'>0</div><br />
+				Wiosła: <div id='lose-oars'>0</div><br />
+				HP: <div id='lose-hp'>0</div><br />
+				<hr />
+				Punkty: <div id='lose-score'>0</div>
+				<button class='menu-opt addi-opt'>Wróć do menu głównego</button>
+			</div>
+			<div id='game-screen'>
+				<div id='board'></div>
+				<div id='stat-bar'>
+					<div id='player'>
+						<img id='player-logo' src="https://yt3.ggpht.com/bmpZa_qcQDbFsnRqWOZQhQL73tu0t6BsiRNJkMuyL5B9n4LeSYrtaqpd9cqooVb4zhbXuYxV=s48-c-k-c0x00ffffff-no-rj" width='100px' height='100px' />
+						<div id='player-data'>
+							<div id='player-name'>NrGeek</div>
+							<div id='level'>1</div>
+							<div id='level-name'></div>
+						</div>
+					</div>
+					<div class='stat-bars'>
+						<div class='stat'>
+							<label>HP:</label>
+							<canvas width='250px' height='30px'></canvas>
+							<span id='stat-hp'>0</span>
+						</div>
+						<div class='stat'>
+							<label>Wiosła:</label>
+							<canvas width='250px' height='28px'></canvas>
+							<span id='stat-oars'>0</span>
+						</div>
+						<div class='stat'>
+							<label>Producenci:</label>
+							<canvas width='250px' height='28px'></canvas>
+							<span id='stat-producers'>0</span>
+						</div>
+					</div>
+					<canvas id='powerup-state' width='50px' height='90px'></canvas>
+					<div id="comment-box"></div>
+					<div class='timer'>
+						<span class='timer-num'>00</span>
+						<span class='timer-sep'>:</span>
+						<span class='timer-num'>00</span>
+						<span class='timer-sep'>:</span>
+						<span class='timer-num'>00</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type='text/javascript' src='./js/initialize.js'></script>
+		<script type='text/javascript' src='./js/interface.js'></script>
+		<script type='text/javascript' src='./js/classes.js'></script>
+		<script type='text/javascript' src='./js/game.js'></script>
+	</body>
+</html>

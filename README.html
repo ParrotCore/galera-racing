@@ -1,0 +1,65 @@
+<!DOCTYPE HTML5>
+<html lang='pl'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Galera Racing - README</title>
+		<link rel='stylesheet' href='./css/readme.css'>
+	</head>
+	<body>
+		<main>
+			<h1>README.HTML</h1>
+			<article class='ar1'>
+				<h1>Witaj użytkowniku!</h1>
+				Jeśli to czytasz, to zapewne wiesz, że galera racing jest już grywalna,
+				z tegoż też względu, bez przedłużania rozpocznę ważne dla ciebie tematy.
+			</article>
+			<article class='ar2'>
+				<h1>Licencje</h1>
+				Kod źródłowy gry należy do mnie, lecz udostępniam go w formie licencji MIT.
+				Każda z zastosowanych przeze mnie grafik jest własnością ich autorów, nie należą do mnie, nie zarabiam na nich, nie zastrzegam sobie do nich praw. Pochodzą one z:
+				<ul>
+					<li>Grafik Google</li>
+					<li>Serwisu <a href='https://flaticon.com'>Flaticon</a></li>
+					<li>Praca użytkownika discorda pod nazwą maxxie_uwu.</li>
+				</ul>
+			</article>
+			<article class='ar3'>
+				<h1>Zarys</h1>
+				Jeśli znasz NRGeeka, oraz jego serię "<a href='https://www.youtube.com/watch?v=14aOPirjPxM&list=PLgiKAWTiepKz5F9H-PiW04nDrTp_jKE6k&ab_channel=NRGeek'>Zagrajmy w crapa (najgorsze gry według NRGeeka)</a>", to zapewne zrozumiesz, do czego nawiązuję i co próbuję memować, jeśli nie, to odsyłam cię na jego kanał.
+				Gra polega na podkradaniu na swoją galerę twórców ch**owych gier poprzez niszczenie ich galer.
+			</article>
+			<article class='ar4'>
+				<h1>Specjalne podziękowania</h1>
+				Dziękuję serdecznie swojej ekipie za wsparcie mentalne przy tworzeniu tej gry, w tym:
+				<ul>
+					<li class='user hidden'>Sulkier</li>
+					<li class='user hidden'>Amelia</li>
+				</ul>
+				Jak i również swoim wiernym testerom:
+				<ul>
+					<li class='user hidden'>yobonez</li>
+					<li class='user hidden'>Maxxie</li>
+				</ul>
+				
+				Którzy poświęcili się i przetetowali gierkę, choć NRGeek i tak by zapytał retorycznie, czy ktoś to w ogóle tetował.
+			</article>
+			<article class='ar5'>
+				<h1>Wymagania</h1>
+				Gra jest w pełni stworzona przy użyciu HTML, CSS, oraz JS, nie zawiera w sobie dodatkowych bibliotek,
+				kod jest ogólnodostępny i nie zawiera w sobie żadnego szkodliwego oprogramowania.
+				Jedyne, czego potrzebujesz, to przeglądarki Google Chrome, która jak na razie jako jedyna ją wspiera, również ważnym elementem jest zezwolenie na javascript w ustawieniach twojej przeglądarki, jeśli masz je wyłączone.
+				Wystarczy uruchomić plik <a href='./index.html'>index.html</a> i voila, jesteś w grze!
+			</article>
+			<script>
+				function spoilerClick(ev)
+				{
+					ev.target.classList.remove("hidden");
+				}
+			
+				const elements = document.querySelectorAll(".user")
+				for(let element of elements)
+					element.addEventListener("click", spoilerClick);
+			</script>
+		</main>
+	</body>
+</html>
